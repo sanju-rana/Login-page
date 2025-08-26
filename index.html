@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CODEXINTERN - Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>LOGIN PAGE</h1>
+            <p>Login to continue</p>
+        </div>
+        
+        <div class="form-container">
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="email" placeholder="Enter your email">
+                </div>
+                
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="password" placeholder="Enter your password">
+                </div>
+                
+                <div class="remember-forgot">
+                    <label>
+                        <input type="checkbox"> Remember me
+                    </label>
+                    <a href="#">Forgot password?</a>
+                </div>
+                
+                <button type="submit" class="btn">Login</button>
+                
+                <div class="success-message" id="successMessage">
+                    Login successful! Redirecting...
+                </div>
+                
+                <div class="register-link">
+                    Don't have an account? <a href="#">Register here</a>
+                </div>
+            </form>
+            
+            <div class="test-credentials">
+                <h3><i class="fas fa-vial"></i> Test Credentials</h3>
+                
+                <div class="credential">
+                    <div class="type">Email:</div>
+                    <div class="value">demo@codexintern.com</div>
+                    <button class="copy-btn" onclick="copyToClipboard('demo@codexintern.com')">Copy</button>
+                </div>
+                
+                <div class="credential">
+                    <div class="type">Password:</div>
+                    <div class="value">demo123</div>
+                    <button class="copy-btn" onclick="copyToClipboard('demo123')">Copy</button>
+                </div>
+                
+                <div class="instructions">
+                    <p><strong>Instructions:</strong> Use the credentials above to test the login form.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast" id="errorToast">
+        <i class="fas fa-exclamation-circle"></i>
+        <span id="toastMessage">Please fill in all required fields</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

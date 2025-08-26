@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 600px;
+    overflow: hidden;
+}
+
+.header {
+    background: linear-gradient(to right, #6e8efb, #a777e3);
+    color: white;
+    text-align: center;
+    padding: 25px 20px;
+}
+
+.header h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.header p {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.form-container {
+    padding: 25px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #333;
+    font-size: 14px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px 12px 40px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #6e8efb;
+    box-shadow: 0 0 0 2px rgba(110, 142, 251, 0.2);
+}
+
+.input-group i {
+    position: absolute;
+    left: 15px;
+    top: 38px;
+    color: #777;
+}
+
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.remember-forgot label {
+    display: flex;
+    align-items: center;
+    color: #555;
+}
+
+.remember-forgot input {
+    margin-right: 8px;
+}
+
+.remember-forgot a {
+    color: #6e8efb;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(to right, #6e8efb, #a777e3);
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: linear-gradient(to right, #5c7de9, #9466d4);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.register-link {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 14px;
+    color: #555;
+}
+
+.register-link a {
+    color: #6e8efb;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+.input-group.error input {
+    border-color: #ff4757;
+}
+
+.success-message {
+    background-color: #2ed573;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 20px;
+    display: none;
+}
+
+.test-credentials {
+    background-color: #f8f9fa;
+    border-left: 4px solid #6e8efb;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 4px;
+}
+
+.test-credentials h3 {
+    color: #333;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.test-credentials h3 i {
+    color: #6e8efb;
+}
+
+.credential {
+    display: flex;
+    margin-bottom: 8px;
+    padding: 10px;
+    background: white;
+    border-radius: 6px;
+    align-items: center;
+}
+
+.credential .type {
+    font-weight: 600;
+    width: 80px;
+    color: #555;
+}
+
+.credential .value {
+    flex: 1;
+    font-family: monospace;
+    color: #333;
+}
+
+.credential .copy-btn {
+    background: #6e8efb;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background 0.3s;
+}
+
+.credential .copy-btn:hover {
+    background: #5c7de9;
+}
+
+.instructions {
+    margin-top: 15px;
+    font-size: 13px;
+    color: #666;
+    line-height: 1.5;
+}
+
+.toast {
+    position: fixed;
+    top: 50px;
+    right: 0;
+    background-color: #ff4757;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 1000;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+}
+
+.toast.show {
+    transform: translateX(0);
+}
+
+.toast.success {
+    background-color: #2ed573;
+}
+
+@media (max-width: 480px) {
+    .container {
+        border-radius: 8px;
+    }
+    
+    .form-container {
+        padding: 20px;
+    }
+    
+    .toast {
+        top: 10px;
+        right: 10px;
+        left: 10px;
+    }
+}
